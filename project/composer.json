@@ -1,0 +1,10 @@
+{
+	"name": "capaci/project",
+	"type": "project",
+	"autoload": {
+		"psr-4": {
+			"App\\": "src/"
+		}
+	},
+	"require": {}
+}

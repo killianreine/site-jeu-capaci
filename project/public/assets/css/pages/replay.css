@@ -1,0 +1,113 @@
+/* toutes les cases du replay sont grisées */
+.replay-plateau .case {
+    filter: grayscale(80%);
+    opacity: 0.5;
+}
+
+/* case du coup joué */
+.replay-plateau .case-selected {
+
+    border: 3px solid rgb(128, 0, 255) !important;
+
+    filter: none !important;
+    opacity: 1 !important;
+
+    animation: pulseAtt 1s infinite !important;
+    border-radius: 25px !important;
+    
+}
+
+/* case où une pièce a été capturée */
+.replay-plateau .case-attaquable {
+    filter: none;
+    opacity: 1;
+
+    border: 3px solid #ff0000;
+    animation: pulseAtt 1s infinite;
+    border-radius: 25px;
+}
+
+.replay-plateau .case:hover,
+.replay-plateau .empty:hover {
+    transform: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* container global replay */
+.replay-ui{
+    margin-top: 0rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
+
+/* affichage joueurs */
+.players{
+    font-size:20px;
+    font-weight:600;
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.vs{
+    font-weight:bold;
+    color:#888;
+}
+
+/* info tour */
+.tour-info{
+    margin-top:6px;
+    font-size:16px;
+    color:#555;
+}
+
+/* zone info */
+.replay-info{
+    text-align:center;
+}
+
+/* boutons replay */
+.replay-controls{
+    display:flex;
+    gap:20px;
+}
+
+/* style général bouton */
+.btn-replay{
+    padding:10px 18px;
+    font-size:15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:all 0.2s ease;
+    font-weight:600;
+}
+
+/* bouton précédent */
+.btn-prev{
+    background:#e0e0e0;
+}
+
+.btn-prev:hover{
+    background:#d0d0d0;
+    transform:translateY(-2px);
+}
+
+/* bouton suivant */
+.btn-next{
+    background:#6c5ce7;
+    color:white;
+}
+
+.btn-next:hover{
+    background:#5746e5;
+    transform:translateY(-2px);
+}
+
+/* effet clic */
+.btn-replay:active{
+    transform:translateY(1px);
+}

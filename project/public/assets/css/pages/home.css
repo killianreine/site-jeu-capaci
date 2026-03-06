@@ -1,0 +1,366 @@
+/* ── Variables cohérentes avec le site ── */
+:root {
+    --violet: #667eea;
+    --violet-dark: #764ba2;
+    --gold: #FFD17C;
+    --gold-dark: #f7bc50;
+    --text: #1a1a2e;
+    --text-muted: #6b7280;
+    --surface: #ffffff;
+    --surface-alt: #f8f8fc;
+    --border: rgba(102, 126, 234, 0.15);
+    --shadow-sm: 0 2px 8px rgba(102, 126, 234, 0.08);
+    --shadow-md: 0 8px 32px rgba(102, 126, 234, 0.12);
+    --shadow-lg: 0 16px 48px rgba(102, 126, 234, 0.18);
+    --radius: 16px;
+    --radius-sm: 10px;
+}
+
+/* ── Layout principal ── */
+.home-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* ── Hero actions ── */
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+}
+
+.btn-hero-primary {
+    background: var(--gold);
+    color: var(--text);
+    box-shadow: 0 4px 16px rgba(255, 209, 124, 0.4);
+}
+.btn-hero-primary:hover {
+    background: var(--gold-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 209, 124, 0.5);
+}
+
+.btn-hero-secondary {
+    background: white;
+    color: var(--violet);
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+.btn-hero-secondary:hover {
+    border-color: var(--violet);
+    background: rgba(102, 126, 234, 0.04);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-hero-code {
+    background: linear-gradient(135deg, var(--violet), var(--violet-dark));
+    color: white;
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.35);
+}
+.btn-hero-code:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.45);
+}
+
+.btn-icon {
+    width: 18px;
+    height: 18px;
+    display: block;
+    flex-shrink: 0;
+}
+
+/* ── Sections lobby ── */
+.lobby-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 720px) {
+    .lobby-grid { grid-template-columns: 1fr; }
+}
+
+.lobby-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: box-shadow 0.25s ease;
+}
+.lobby-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.lobby-card-header {
+    padding: 1.1rem 1.4rem 0.9rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--surface-alt);
+}
+
+.lobby-card-header .card-icon {
+    font-size: 1.1rem;
+}
+
+.lobby-card-header h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.lobby-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.lobby-table th {
+    padding: 8px 14px;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface-alt);
+}
+
+.lobby-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.06);
+    vertical-align: middle;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.lobby-table tr:last-child td {
+    border-bottom: none;
+}
+
+.lobby-table tr:hover td {
+    background: rgba(102, 126, 234, 0.03);
+}
+
+.player-name {
+    font-weight: 600;
+    color: var(--text);
+}
+
+.date-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.empty-row td {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    font-style: italic;
+}
+
+/* ── Boutons dans tableau ── */
+.btn-table {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-resume {
+    background: var(--gold);
+    color: var(--text);
+}
+.btn-resume:hover {
+    background: var(--gold-dark);
+    transform: translateY(-1px);
+}
+
+.btn-join {
+    background: linear-gradient(135deg, var(--violet), var(--violet-dark));
+    color: white;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+.btn-join:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.badge-players {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    background: rgba(102, 126, 234, 0.1);
+    color: var(--violet);
+    border-radius: 50px;
+    padding: 2px 8px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+/* ── Modal rejoindre par code ── */
+#join-modal-toggle { display: none; }
+
+.join-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 26, 46, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+#join-modal-toggle:checked ~ .join-modal {
+    display: flex;
+}
+
+.join-modal-box {
+    background: white;
+    border-radius: var(--radius);
+    padding: 2rem;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: var(--shadow-lg);
+    animation: popIn 0.25s ease;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+}
+
+.join-modal-box h2 {
+    margin: 0 0 1.2rem;
+    font-size: 1.2rem;
+    color: var(--text);
+    font-weight: 700;
+}
+
+.join-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 1.1rem;
+    font-family: inherit;
+    letter-spacing: 3px;
+    text-align: center;
+    color: var(--text);
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.join-input:focus {
+    outline: none;
+    border-color: var(--violet);
+}
+
+.join-modal-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.2rem;
+}
+
+.btn-cancel {
+    flex: 1;
+    padding: 11px;
+    border: 2px solid var(--border);
+    border-radius: 50px;
+    background: white;
+    color: var(--text-muted);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-cancel:hover { border-color: #ccc; color: var(--text); }
+
+.btn-validate {
+    flex: 2;
+    padding: 11px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, var(--violet), var(--violet-dark));
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.35);
+}
+.btn-validate:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.45);
+}
+
+/* ── Dropdown (conservé) ── */
+.dropdown {
+    align-self: center;
+    justify-self: center;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background-color: white;
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 8px 0;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.2s ease;
+}
+
+.dropdown-menu a:hover { background-color: #f0f0f0; }
+.dropdown:hover .dropdown-menu { display: block; }

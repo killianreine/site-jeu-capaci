@@ -1,0 +1,230 @@
+.game-over-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation: fadeIn 0.4s ease-in;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.game-over-modal.show {
+    display: flex !important;
+}
+
+.game-over-modal .modal-content {
+    border-radius: 25px;
+    padding: 2.5rem 3rem;
+    text-align: center;
+    max-width: 480px;
+    width: 90%;
+    animation: slideDown 0.4s ease-out;
+    position: relative;
+}
+
+.result-icon {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    animation: iconPop 0.5s 0.2s ease-out both;
+}
+
+@keyframes iconPop {
+    from { transform: scale(0); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+.result-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 1.25rem 0;
+    letter-spacing: -0.5px;
+}
+
+.winner-modal {
+    background: rgba(0, 0, 0, 0.5);
+    border: solid 3px #FFD17C;
+}
+
+.winner-content {
+    background-color: white;
+    border: solid 3px #FFD17C;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.winner-title {
+    color: #e07b00;
+}
+
+.winner-content .winner-text {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: 600;
+    padding: 0.9rem 1.25rem;
+    background-color: #FFF5DC;
+    border-radius: 16px;
+    border: 2px solid #FFD17C;
+    margin: 0 0 0.75rem 0;
+}
+
+.winner-content .winner-text strong {
+    color: #e07b00;
+}
+
+.winner-content .loser-text {
+    font-size: 0.95em;
+    color: #888;
+    margin: 0 0 1.5rem 0;
+}
+
+.winner-content .loser-text strong {
+    color: #aaa;
+}
+
+/* Boutons gagnant */
+.winner-content .btn-rejouer {
+    background-color: #FFD17C;
+    color: black;
+    border: none;
+    box-shadow: 0 4px 14px rgba(255, 209, 124, 0.5);
+}
+
+.winner-content .btn-rejouer:hover {
+    background-color: #f7bc50;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 209, 124, 0.6);
+}
+
+.winner-content .btn-accueil {
+    background: white;
+    color: #333;
+    border: 2px solid #e0e0e0;
+}
+
+.winner-content .btn-accueil:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+.loser-modal {
+    background: rgba(0, 0, 0, 0.5);
+    border: solid 3px rgb(100, 0, 200);
+}
+
+.loser-content {
+    background-color: white;
+    border: solid 3px rgb(128, 0, 255);
+    box-shadow: 0 12px 40px rgba(128, 0, 255, 0.15);
+}
+
+.loser-title {
+    color: rgb(128, 0, 255);
+}
+
+.loser-content .loser-self-text {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: 600;
+    padding: 0.9rem 1.25rem;
+    background: rgba(128, 0, 255, 0.06);
+    border-radius: 16px;
+    border: 2px solid rgba(128, 0, 255, 0.25);
+    margin: 0 0 0.75rem 0;
+}
+
+.loser-content .loser-self-text strong {
+    color: rgb(128, 0, 255);
+}
+
+.loser-content .winner-opponent-text {
+    font-size: 0.95em;
+    color: #888;
+    margin: 0 0 1.5rem 0;
+}
+
+.loser-content .winner-opponent-text strong {
+    color: #aaa;
+}
+
+/* Boutons perdant */
+.loser-content .btn-rejouer-loser {
+    background-color: rgb(128, 0, 255);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 14px rgba(128, 0, 255, 0.3);
+}
+
+.loser-content .btn-rejouer-loser:hover {
+    background-color: rgb(100, 0, 200);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(128, 0, 255, 0.45);
+}
+
+.loser-content .btn-accueil-loser {
+    background: white;
+    color: #333;
+    border: 2px solid #e0e0e0;
+}
+
+.loser-content .btn-accueil-loser:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+.game-over-modal .modal-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.loser-self-text strong {
+    color: #764ba2;
+}
+
+.game-over-modal .btn {
+    padding: 0.85rem 1.75rem;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    font-family: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.modal {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    z-index: 2000;
+    animation: slideUpAndFade 5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px) scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}

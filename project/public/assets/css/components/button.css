@@ -1,0 +1,59 @@
+.nav-button {
+    background-color: #fdfffd;
+    border: solid;
+    color: black;
+    padding: 10px 24px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: rounded;
+}
+
+.button-creer-partie {
+    background-color: #FFD17C;
+    border: none;
+    color: black;
+    padding: 10px 24px; /* Ajusté pour correspondre au visuel */
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50px; /* Plus arrondi pour l'effet "pilule" de l'image */
+    cursor: pointer;
+    
+    /* Le secret de l'alignement est ici */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* L'espace entre l'icône et le texte */
+}
+
+.button-icon {
+    width: 24px;  /* Ajuste la taille selon ton SVG */
+    height: 24px;
+    display: block;
+}
+
+.button-creer-partie:hover {
+    background-color: #f7bc50; /* Un orange un peu plus foncé plutôt que le vert */
+    transition: background-color 0.3s;
+}
+
+
+.button-rejoindre-partie {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.button-rejoindre-partie:hover {
+    background-color: #007bb5;
+}

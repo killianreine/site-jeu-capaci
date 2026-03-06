@@ -1,0 +1,163 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+    --case-size: 5rem;
+    --gap-size: 1rem;
+}
+
+
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+    margin: 0;
+    background-attachment: fixed;
+    padding: 0;
+	gap: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.site-header {
+	background: rgba(255, 255, 255, 0.98);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+	border-bottom: 2px solid #667eea;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+
+.header-content {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem 1.5rem; /* réduit fortement la hauteur */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+/* logo */
+.logo-text h1 {
+	margin: 0;
+	font-size: 2rem;
+	line-height: 1;
+}
+
+.tagline {
+	margin: 0;
+	font-size: 1rem;
+	color: #777;
+}
+
+/* navigation */
+.header-nav {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.nav-link {
+	text-decoration: none;
+	color: #333;
+	font-weight: 500;
+	padding: 0.35rem 0.7rem; /* réduit la hauteur du bouton */
+	border-radius: 6px;
+	transition: all 0.25s ease;
+	font-size: 1rem;
+}
+
+.nav-link:hover {
+	background: #FFD17C;
+}
+
+main
+{
+	padding: 2rem;
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	padding: 2rem;
+}
+
+
+
+/* FOOTER */
+.site-footer {
+	background: rgba(255, 255, 255, 0.98);
+	backdrop-filter: blur(10px);
+	border-top: 3px solid #667eea;
+	margin-top: auto;
+	box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+	text-align: center;
+}
+
+.footer-authors {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.authors-title {
+	margin: 0;
+	font-weight: 600;
+	color: #333;
+	font-size: 0.95rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.authors-list {
+	display: flex;
+	gap: 0.75rem;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.author {
+	color: #667eea;
+	font-weight: 500;
+	font-size: 1rem;
+	padding: 0.25rem 0.75rem;
+	background: rgba(102, 126, 234, 0.1);
+	border-radius: 20px;
+	transition: all 0.3s ease;
+}
+
+.author:hover {
+	transform: translateY(-2px);
+}
+
+.author-separator {
+	color: #999;
+	font-weight: 300;
+}
+
+.footer-year {
+	margin-top: 0.5rem;
+}
+
+.footer-year p {
+	margin: 0;
+	color: #999;
+	font-size: 0.85rem;
+}

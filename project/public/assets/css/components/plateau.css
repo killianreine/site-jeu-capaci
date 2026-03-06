@@ -1,0 +1,9 @@
+.plateau {
+    display: grid;
+    background-color: #FFD17C;
+    border-radius: 25px;
+    padding: 1rem;
+    grid-template-columns: repeat(6, var(--case-size));
+    grid-template-rows: repeat(6, var(--case-size));
+    gap: var(--gap-size);
+}

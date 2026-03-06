@@ -1,0 +1,42 @@
+/* Container dropdown */
+.dropdown {
+    align-self: center;
+    justify-self: center;
+
+    position: relative;
+    display: inline-block;
+}
+
+/* Menu caché par défaut */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: 0;
+
+    background-color: white;
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 8px 0;
+    z-index: 1000;
+}
+
+/* Liens du menu */
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.2s ease;
+}
+
+/* Hover sur lien */
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+/* 🔥 Apparition au survol */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}

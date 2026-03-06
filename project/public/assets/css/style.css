@@ -1,0 +1,110 @@
+
+.logo-section {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.logo-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo-text h1 {
+	margin: 0;
+	font-size: 1.8rem;
+	font-weight: 700;
+	background: linear-gradient(135deg, #667eea, #764ba2);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.logo-text .tagline {
+	margin: 0;
+	font-size: 0.75rem;
+	color: #666;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+
+
+@keyframes slideUpAndFade {
+	0% {
+		transform: translateX(-50%) translateY(20px);
+		opacity: 0;
+	}
+	10% {
+		transform: translateX(-50%) translateY(0);
+		opacity: 1;
+	}
+	80% {
+		transform: translateX(-50%) translateY(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) translateY(20px);
+		opacity: 0;
+	}
+}
+
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+/*  NAV BAR (Reset button) */
+.nav-bar {
+	display: flex;
+	flex-direction: row;
+    margin: 2rem auto;
+	background-color: white;
+	justify-content: center;
+	border-radius: 25px;
+	padding: 0.5rem 1rem;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	max-width: fit-content;
+}
+
+.reset-btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.5rem 1rem;
+	border-radius: 20px;
+	transition: all 0.3s ease;
+	color: #667eea;
+	font-weight: 500;
+	font-size: 1rem;
+}
+
+.reset-btn svg {
+	color: #667eea;
+	transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+	background: linear-gradient(135deg, #667eea, #764ba2);
+	color: white;
+	transform: scale(1.05);
+}
+
+.reset-btn:hover svg {
+	color: white;
+	stroke: white;
+	transform: rotate(-180deg);
+}
+
+.reset-text {
+	font-family: inherit;
+}

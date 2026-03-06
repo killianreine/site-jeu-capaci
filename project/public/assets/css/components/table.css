@@ -1,0 +1,89 @@
+/* Table générale */
+.games-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Légère ombre pour le relief */
+}
+
+/* Alignement des entêtes et cellules */
+.games-table th, 
+.games-table td {
+    padding: 12px;
+    text-align: center; /* On centre tout par défaut pour la cohérence */
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+/* L'hôte est souvent mieux aligné à gauche pour la lecture */
+.games-table th:first-child, 
+.games-table td:first-child {
+    text-align: left;
+}
+
+.games-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+}
+
+/* --- LE CENTRAGE DES BOUTONS --- */
+/* On s'assure que le formulaire ne crée pas de décalage */
+.games-table td form {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.join-button-table {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Un peu plus large pour le confort */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    font-weight: 500;
+}
+
+.join-button-table:hover {
+    background-color: #218838;
+    transform: translateY(-1px); /* Petit effet de survol */
+}
+
+.join-button-table:active {
+    transform: translateY(0);
+}
+
+/* --- CENTRAGE DES ÉLÉMENTS HORS TABLEAU --- */
+.button-creer-partie, 
+.button-rejoindre-partie {
+    display: flex;
+    margin: 25px auto; /* Centre le bloc lui-même */
+    justify-content: center;
+    align-items: center;
+    width: fit-content; /* S'adapte au texte pour que margin auto fonctionne */
+    padding: 12px 24px;
+    /* Ajoute ici tes styles de couleurs pour ces boutons */
+}
+
+.separator {
+    text-align: center;
+    margin: 30px 0;
+    font-style: italic;
+    color: #888;
+    position: relative;
+}
+
+/* Optionnel : petite ligne décorative pour le séparateur */
+.separator::before, 
+.separator::after {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background: #ddd;
+    vertical-align: middle;
+    margin: 0 10px;
+}
