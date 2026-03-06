@@ -1,5 +1,13 @@
 #  Capaci
 
+## Accès au jeu : https://notes-de-cours-kreine.fr/public/capaci
+
+## Équipe de développement
+
+- Thomas BOUDEELE : 
+- Louis HAGUES : 
+- Killian Reine :  https://github.com/killianreine
+
 ##  Présentation du jeu
 
 **Capaci** est un jeu de stratégie pour **deux joueurs (1v1)** qui combine :
