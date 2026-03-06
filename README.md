@@ -6,7 +6,7 @@
 
 - Thomas BOUDEELE : 
 - Louis HAGUES : 
-- Killian Reine :  https://github.com/killianreine
+- Killian REINE :  https://github.com/killianreine
 
 ##  Présentation du jeu
 
