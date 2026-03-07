@@ -4,7 +4,7 @@
 
 ## Équipe de développement
 
-- Thomas BOUDEELE : 
+- Thomas BOUDEELE : https://github.com/timberlek78
 - Louis HAGUES : 
 - Killian REINE :  https://github.com/killianreine
 
