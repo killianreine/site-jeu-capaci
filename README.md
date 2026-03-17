@@ -5,7 +5,7 @@
 ## Équipe de développement
 
 - Thomas BOUDEELE : https://github.com/timberlek78
-- Louis HAGUES : 
+- Louis HAGUES : https://github.com/Louis-Hagues
 - Killian REINE :  https://github.com/killianreine
 
 ##  Présentation du jeu
